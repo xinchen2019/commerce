@@ -1,0 +1,66 @@
+<configuration>
+    <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:mysql://master:3306/hive2?useSSL=false&amp;createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=UTF-8</value>
+        <description>JDBC connect string for a JDBC metastore</description>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>com.mysql.jdbc.Driver</value>
+        <description>Driver class name for a JDBC metastore</description>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionUserName</name>
+        <value>ubuntu</value>
+        <description>username to use against metastore database</description>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionPassword</name>
+        <value>123456</value>
+        <description>password to use against metastore database</description>
+    </property>
+    <property>
+        <name>hive.resultset.use.unique.column.names</name>
+        <value>false</value>
+        <description>Make column names unique in the result set by qualifying column names with table alias if needed.
+            Table alias will be added to column names for queries of type &quot;select *&quot; or
+            if query explicitly uses table alias &quot;select r1.x..&quot;.
+        </description>
+    </property>
+    <property>
+        <name>hive.cli.print.header</name>
+        <value>true</value>
+        <description>Whether to print the names of the columns in query output.</description>
+    </property>
+    <property>
+        <name>hive.server2.thrift.port</name>
+        <value>10000</value>
+    </property>
+    <property>
+        <name>hive.server2.thrift.bind.host</name>
+        <value>master</value>
+    </property>
+    <property>
+        <name>hive.server2.transport.mode</name>
+        <value>http</value>
+        <description>Expects one of [binary, http].
+            Transport mode of HiveServer2.
+        </description>
+    </property>
+    <property>
+        <name>hive.server2.thrift.http.port</name>
+        <value>10001</value>
+        <description>Port number of HiveServer2 Thrift interface when hive.server2.transport.mode is 'http'.
+        </description>
+    </property>
+    <property>
+        <name>hive.server2.thrift.http.path</name>
+        <value>cliservice</value>
+        <description>Path component of URL endpoint when in HTTP mode.</description>
+    </property>
+    <property>
+        <name>hive.metastore.warehouse.dir</name>
+        <value>/user/hive/warehouse</value>
+        <description>location of default database for the warehouse</description>
+    </property>
+</configuration>
